@@ -1,0 +1,16 @@
+.card-container {
+    margin: 0 20px 27px 20px;
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (min-width: 1024px) {
+        margin: 0 100px 50px 100px;
+        padding: 56px 50px 43px 50px;
+        background-color: #f6f6f6;
+        border-radius: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px 60px;
+    }
+}

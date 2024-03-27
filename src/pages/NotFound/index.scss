@@ -1,0 +1,41 @@
+
+.error-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .number-error {
+        font-size: 96px;
+        color: #ff6060;
+        margin: 113px 0 0 0;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 288px;
+        }
+    }
+
+    .text-error {
+        font-size: 18px;
+        font-weight: 500;
+        color: #ff6060;
+        margin: 113px 50px;
+        text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 36px;
+        }
+    }
+
+    .link-to-home  {
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration-line: underline;
+        margin: 0 0 113px 0;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+        }
+    }
+}
