@@ -13,7 +13,8 @@ export default function Cards({location, source, altText, title}) {
                 className="card-img" 
                 src={source} 
                 alt={altText} />
-                <div className="darken-container"></div>
+                <div className="darken-container">
+                </div>
                 <h3 className="card-title">
                     {title}
                 </h3>

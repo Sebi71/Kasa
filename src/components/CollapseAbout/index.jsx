@@ -10,19 +10,20 @@ export default function Collapse({title, text}) {
     
    
     return (
-        <div>
-            <div 
-            className="container-collapse">
-                    <div className="collapse-bar">
-                        <h3 className="title">{title}</h3>
-                        <img 
-                        onClick={() => setInvisible(!invisible)}
-                        className={`${invisible && "close"} arrow`}
-                        src={arrow} 
-                        alt="flêche déploiement menu" />
-                    </div>    
-                    <p className={`${invisible && "text-visible"} content-collapse`}>{text}</p>
-                </div>
-        </div>
+        <>
+            <div className="collapse-bar">
+                <h3 className="title">
+                    {title}
+                </h3>
+                <img 
+                onClick={() => setInvisible(!invisible)}
+                className={`${invisible && "close"} arrow`}
+                src={arrow} 
+                alt="flêche déploiement menu" />
+            </div>    
+            <span className={`${invisible && "text-visible"} content-collapse`}>
+                {text}
+            </span>
+        </>
     )
 }

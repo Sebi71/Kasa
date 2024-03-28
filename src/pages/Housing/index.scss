@@ -1,0 +1,70 @@
+.principal-content {
+    
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ 
+ .rating-profil {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 17px 20px 0 20px;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: column-reverse;
+            margin: 30px 100px 20px 100px;
+        }
+
+        .profil {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .name {
+                color: #ff6060;
+                text-align: right;
+                font-size: 12px;
+                font-weight: 500;
+                width: 60px;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 18px;
+                }
+            }
+
+            .photo {
+                width: 32px;
+                border-radius: 100%;
+
+                @media screen and (min-width: 1024px) {
+                    width: 64px;
+                }
+            }
+            
+        } 
+    }
+}
+
+
+
+.container {
+    margin: 0px 19px 20px 19px;
+
+    @media screen and (min-width: 1024px) {
+        // display: flex;
+        // flex-direction: row;
+        // width: 100%;
+        // // justify-content: space-between;
+        margin: 0 100px;
+        
+    }
+
+
+    .list-equipments {
+        padding: 0;
+        list-style-type: none;
+        line-height: normal;
+    }
+}

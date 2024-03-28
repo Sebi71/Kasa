@@ -33,7 +33,6 @@ export default function Carrousel({images, altText}) {
   
     let content;
     if (slideNumber > 1) {
-        console.log("hello");
         content = 
         <div>
             <div className='arrows'>
@@ -53,6 +52,7 @@ export default function Carrousel({images, altText}) {
             </div>
         </div>
     }
+    
     
     return (
       <div className="slider">
