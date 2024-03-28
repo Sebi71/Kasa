@@ -23,8 +23,7 @@ export default function Home() {
             source={housing.cover}
             altText={"photo représentant " + housing.title}
             title={housing.title}
-
-          />
+         />
         )}
       </article>
     </>
