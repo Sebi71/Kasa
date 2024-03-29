@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/CollapseAbout"
 import Rating from "../../components/Rating";
 import data from "../../datas/housing.json"
+import ErrorLogo from "../../assets/images/logo-oups.jpg"
 import "./index.scss"
 
 
@@ -11,7 +13,22 @@ export default function Housing () {
     const housing = data.find(app => app.id === id);
   
     if (!housing) {
-      return <div>Appartement non trouvé</div>;
+      return  <section className="housing-not-found">
+                <img 
+                    className="logo-error"
+                    src={ErrorLogo} 
+                    alt="logo oups !" />
+                <div>
+                    <p className="error-title">Page non trouvé !</p>
+                    <p className="error-text">Le logemement que vous cherchez n'existe pas ou a été déplacé !</p>
+                    <Link
+                    className="link-to-home"
+                        to="/"
+                    >
+                    Revenir à la page d'accueil !
+                    </Link>
+                </div>
+            </section>;
     }
   
     return (
