@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
     background-color: #ff6060;
     border-radius: 5px;
     height: 30px;
@@ -10,7 +11,7 @@
 
     @media screen and (min-width: 1024px) {
         height: 54px;
-        margin-top: 30px;
+        // margin-top: 30px;
     }
     
     .title {
@@ -56,6 +57,7 @@
 }
 
 .text-visible {
+    // z-index: 1;
     height: 100%;
     margin: 15px 35px 25px 35px;
     opacity: 1;

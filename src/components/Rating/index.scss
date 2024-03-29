@@ -1,0 +1,18 @@
+.container-star {
+    width: 180px;
+
+    .star {
+        font-size: 18px;
+        fill: #e3e3e3 !important;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 21px;
+            font-size: 36px;
+        } 
+    }
+
+    .star-full {
+        fill: #ff6060 !important;
+
+    }
+}

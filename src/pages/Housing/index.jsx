@@ -1,6 +1,5 @@
 import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/CollapseAbout"
-import InformationHousing from "../../components/InfoHousing";
 import Rating from "../../components/Rating";
 import data from "../../datas/housing.json"
 import "./index.scss"
@@ -23,21 +22,30 @@ export default function Housing () {
         />
 
         <div className="principal-content">
-            <InformationHousing 
-                title={housing.title}
-                rating={housing.rating}
-                location={housing.location}
-                tags={housing.tags.map((tags, id) => (
+            <div className="container-information">
+                <div className="header-content">
+                    <h1 className="title">
+                        {housing.title}
+                    </h1>
+                    <p className="location">
+                        {housing.location}
+                    </p>
+                </div>
+                <div className="tags">
+                    {housing.tags.map((tags, id) => (
                     <span 
                         key={id}
                         className="tag">
                             {tags}
                     </span>
                 ))}
-                />
+                </div>
+            </div>
             
             <div className="rating-profil">
-                <Rating />
+                <Rating 
+                    rating={housing.rating}
+                />
                 <div className="profil">
                     <h3 className="name">
                         {housing.host.name}
@@ -52,11 +60,14 @@ export default function Housing () {
         </div>
 
         <div className="container">
+            <div className="collapse">
             <Collapse
                 title={'Description'}
                 text={housing.description}
             />
-             <Collapse
+            </div>
+            <div className="collapse">
+            <Collapse
                 title={'Équipements'}
                 text={housing.equipments.map((equipment, id) => (
                     <ul 
@@ -66,6 +77,7 @@ export default function Housing () {
                     </ul>
                 ))}
             />
+            </div>
         </div>
       </>
     );
