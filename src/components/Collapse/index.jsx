@@ -21,8 +21,8 @@ export default function Collapse({title, text}) {
                 src={arrow} 
                 alt="flêche déploiement menu" />
             </div>    
-            <span className={`${invisible && "text-visible"} content-collapse`}>
-                {text}
+            <span className={invisible ? "content-collapse text-visible" : "content-collapse text-invisible"}>
+                <p>{text}</p>
             </span>
         </>
     )

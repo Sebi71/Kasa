@@ -7,7 +7,7 @@
     background-color: #ff6060;
     border-radius: 5px;
     height: 30px;
-    margin-top: 20px;
+    // margin-bottom: 20px;
 
     @media screen and (min-width: 1024px) {
         height: 54px;
@@ -44,12 +44,11 @@
 
 .content-collapse {
     display: block;
-    height: 0;
     margin: 0 35px;
     font-size: 13px;
-    opacity: 0;
-    transform: translateY(-5px);
     line-height: 1.5;
+    max-height: 0;
+    transition: max-height 0.3s ease;
 
     @media screen and (min-width: 1024px) {
         font-size: 17px;
@@ -57,11 +56,17 @@
 }
 
 .text-visible {
-    // z-index: 1;
-    height: 100%;
-    margin: 15px 35px 25px 35px;
+    max-height: 300px;
+    margin: 15px 35px 0px 35px;
     opacity: 1;
     transform: translateY(0);
+    transition: all 600ms ease-in-out;
+}
+
+.text-invisible {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
     transition: all 600ms ease-in-out;
 }
 

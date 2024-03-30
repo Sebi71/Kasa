@@ -17,7 +17,7 @@ export default function Carrousel({images, altText}) {
           index === slideNumber - 1 ? 0 : index + 1
         );
         setFadeOut(false);
-      }, 200);
+      }, 150);
     };
   
     const prevSlide = () => {
@@ -27,7 +27,7 @@ export default function Carrousel({images, altText}) {
           index === 0 ? slideNumber - 1 : index - 1
         );
         setFadeOut(false);
-      }, 200); 
+      }, 150); 
     };
 
   
@@ -52,15 +52,26 @@ export default function Carrousel({images, altText}) {
             </div>
         </div>
     }
-    
-    
+
     return (
       <div className="slider">
-        {content}
-        <img 
-            className={`img-slider ${fadeOut && 'fade-out'}`}
-            src={images[currentIndex]} 
-            alt={altText} />
+        {images.map((picture, index) => {
+                return (
+                  <div
+                    key={index}
+                  >
+                    {index === currentIndex && (
+                      <img 
+                        src={picture} 
+                        alt={altText} 
+                        className={`img-slider ${fadeOut && 'fade-out'}`} />
+                    )}
+                  </div>
+                );
+              })}
+          {content}
       </div>
     );
+
+
 }

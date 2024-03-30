@@ -12,10 +12,12 @@
         object-fit: cover;
         border-radius: 10px;
         opacity: 1;
-        transition: opacity 200ms ease-in;
+        transform: scale(1);
+        transition: all 200ms ease-in;
         
         &.fade-out {
           opacity: 0.5;
+          transform: scale(1.01);
         }
 
         @media screen and (min-width: 1024px) {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
-import Collapse from "../../components/CollapseAbout"
+import Collapse from "../../components/Collapse"
 import Rating from "../../components/Rating";
 import data from "../../datas/housing.json"
 import ErrorLogo from "../../assets/images/logo-oups.jpg"

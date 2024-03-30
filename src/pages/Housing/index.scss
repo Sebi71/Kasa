@@ -176,6 +176,9 @@
 
 
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin: 0px 19px 20px 19px;
 
     @media screen and (min-width: 1024px) {
@@ -183,20 +186,22 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 20px;
-        margin: 0px 100px 0 100px;
+        margin: 24px 100px 35px 100px;
         
     }
     
     .collapse {
+        // margin-top: 20px;
         @media screen and (min-width: 1024px) {
         width: 582px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         }
     
         .list-equipments {
             padding: 0;
+            margin: 0;
             list-style-type: none;
-            line-height: normal;
+            line-height: 1.5;
         }
     }
 }
