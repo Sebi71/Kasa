@@ -17,14 +17,12 @@
 * @param {Array} text - List of different equipment to display, retrieved from housinData. 
 */
 
-/**import of the Link component from the "react-router-dom" package for managing routes in web applications.*/
-import { Link } from "react-router-dom";
 /**import the necessary components, housingData, img to display the page */
 import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/Collapse"
 import Rating from "../../components/Rating";
 import housingData from "../../datas/housing.json"
-import ErrorLogo from "../../assets/images/logo-oups.jpg"
+import NotFound from "../NotFound";
 import "./index.scss"
 
 
@@ -34,24 +32,9 @@ export default function Housing () {
     //searches housingData for the ID that matches the one extracted from the URL
     const housing = housingData.find(app => app.id === id);
   
-    //if no housing is found, displays an error message with a link to return to the home page
+    //if no housing is found, return error page
     if (!housing) {
-      return  <section className="housing-not-found">
-                <img 
-                    className="logo-error"
-                    src={ErrorLogo} 
-                    alt="logo oups !" />
-                <div>
-                    <p className="error-title">Page non trouvé !</p>
-                    <p className="error-text">Le logemement que vous cherchez n'existe pas ou a été déplacé !</p>
-                    <Link
-                    className="link-to-home"
-                        to="/"
-                    >
-                    Revenir à la page d'accueil !
-                    </Link>
-                </div>
-            </section>;
+      return  <NotFound />
     }
   
     return (

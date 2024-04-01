@@ -2,71 +2,11 @@
 /****Style for housing page****/
 /******************************/
 /**Contains :
-* 1- Housing not found style
-* 2- Central Content Style
-* 3- Collapse housing style
+* 1- Central Content Style
+* 2- Collapse housing style
 */
 
-// 1- Housing not found style :
-.housing-not-found {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 20px 70px 20px ;
-
-    @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        gap: 200px;
-        align-items: center;
-        margin: 0 100px 100px 100px;
-    }
-    
-    .logo-error {
-        width: 150px;
-
-        @media screen and (min-width: 1024px) {
-            width: 300px;
-        }
-    }
-
-    .error-title {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 500;
-        color: #ff6060;
-
-        @media screen and (min-width: 1024px) {
-            font-size: 36px;
-        }
-    }
-
-    .error-text {
-        text-align: center;
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 50px;
-
-        @media screen and (min-width: 1024px) {
-            font-size: 22px;
-        }
-    }
-
-    .link-to-home  {
-        display: flex;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: 500;
-        text-decoration-line: underline;
-
-        @media screen and (min-width: 1024px) {
-            font-size: 18px;
-        }
-    }
-}
-
-
-// 2- Central Content Style :
+// 1- Central Content Style :
 .principal-content {
     
     @media screen and (min-width: 1024px) {
@@ -185,7 +125,7 @@
 }
 
 
-// 3- Collapse housing style :
+// 2- Collapse housing style :
 .container-collapse-housing {
     display: flex;
     flex-direction: column;
