@@ -1,17 +1,40 @@
+/***********************/
+/***NOT HOOUSING PAGE***/
+/***********************/
+
+/**
+*If housing not found :
+* @param {string} src - Recovery of the imported image.
+* @param {string} to - URL that links to the home page.
+*Carrousel:
+* @param {Array} images - Images to display in carousel, retrieved from housingData.
+* @param {string} altText - Alt text, defined by title in housingData. 
+*Rating:
+* @param {number} ratting - Retrieving the rating in housingData. 
+*Collapse:
+* @param {string} title - Description and equipments title retrieved in housingData.
+* @param {string} text - Description displayed, retrieved from housingData. 
+* @param {Array} text - List of different equipment to display, retrieved from housinData. 
+*/
+
+/**import of the Link component from the "react-router-dom" package for managing routes in web applications.*/
 import { Link } from "react-router-dom";
+/**import the necessary components, housingData, img to display the page */
 import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/Collapse"
 import Rating from "../../components/Rating";
-import data from "../../datas/housing.json"
+import housingData from "../../datas/housing.json"
 import ErrorLogo from "../../assets/images/logo-oups.jpg"
 import "./index.scss"
 
 
 export default function Housing () {
+    //retrieving housing ID from current url
     const id = window.location.pathname.split('/').pop();
+    //searches housingData for the ID that matches the one extracted from the URL
+    const housing = housingData.find(app => app.id === id);
   
-    const housing = data.find(app => app.id === id);
-  
+    //if no housing is found, displays an error message with a link to return to the home page
     if (!housing) {
       return  <section className="housing-not-found">
                 <img 
@@ -40,7 +63,8 @@ export default function Housing () {
 
         <div className="principal-content">
             <div className="container-information">
-                <div className="header-content">
+                <div className="header-information">
+                    {/* retrieving title and location from housinData */}
                     <h1 className="title">
                         {housing.title}
                     </h1>
@@ -49,9 +73,11 @@ export default function Housing () {
                     </p>
                 </div>
                 <div className="tags">
+                    {/* browse the tags in housingData and 
+                    create a span with the content of each tag */}
                     {housing.tags.map((tags, id) => (
                     <span 
-                        key={id}
+                        key={id} // unique key
                         className="tag">
                             {tags}
                     </span>
@@ -63,7 +89,9 @@ export default function Housing () {
                 <Rating 
                     rating={housing.rating}
                 />
-                <div className="profil">
+                <div className="profil-content">
+                    {/* retrieving the name and photo 
+                    in the host part of housingData */}
                     <h3 className="name">
                         {housing.host.name}
                     </h3>
@@ -76,20 +104,20 @@ export default function Housing () {
             </div>
         </div>
 
-        <div className="container">
-            <div className="collapse">
+        <div className="container-collapse-housing">
+            <div className="collapse-item">
             <Collapse
                 title={'Description'}
                 text={housing.description}
             />
             </div>
-            <div className="collapse">
+            <div className="collapse-item">
             <Collapse
                 title={'Équipements'}
                 text={housing.equipments.map((equipment, id) => (
                     <ul 
                         className="list-equipments"
-                        key={id}>
+                        key={id}> 
                             <li>{equipment}</li>
                     </ul>
                 ))}

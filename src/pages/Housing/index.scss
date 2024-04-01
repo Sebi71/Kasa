@@ -1,3 +1,13 @@
+/******************************/
+/****Style for housing page****/
+/******************************/
+/**Contains :
+* 1- Housing not found style
+* 2- Central Content Style
+* 3- Collapse housing style
+*/
+
+// 1- Housing not found style :
 .housing-not-found {
     display: flex;
     flex-direction: column;
@@ -56,6 +66,7 @@
 }
 
 
+// 2- Central Content Style :
 .principal-content {
     
     @media screen and (min-width: 1024px) {
@@ -74,7 +85,7 @@
             margin: 0 100px 0 100px;
         }
     
-        .header-content {
+        .header-information {
             margin: 15px 0 10px 0;
     
             @media screen and (min-width: 1024px) {
@@ -142,7 +153,7 @@
             margin: 30px 100px 20px 100px;
         }
 
-        .profil {
+        .profil-content {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -174,8 +185,8 @@
 }
 
 
-
-.container {
+// 3- Collapse housing style :
+.container-collapse-housing {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -190,8 +201,7 @@
         
     }
     
-    .collapse {
-        // margin-top: 20px;
+    .collapse-item {
         @media screen and (min-width: 1024px) {
         width: 582px;
         margin-bottom: 30px;

@@ -1,6 +1,23 @@
+/****************/
+/***ABOUT PAGE***/
+/****************/
+
+/**
+*Banner :
+* @param {string} classDiv - Class for container.
+* @param {string} classImg - Class for img.
+* @param {string} img - Image URL import.
+* @param {string} altText - Alt text for image.
+*Collapse :
+* @param {string} key - A unique key for each collapsible.
+* @param {string} title - Collapse title retrieved in datacollapse.
+* @param {string} text - Collapse text retrieved in datacollapse.
+*/
+
+/**import the necessary components, data, img to display the page */
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
-import collapseData from "../../datas/collapses.json"
+import datacollapse from "../../datas/collapses.json"
 import imgBanner from "../../assets/images/banner-for-about.png"
 
 import "./index.scss"
@@ -14,11 +31,14 @@ export default function About() {
         altText={"photo de montagnes"}
       />
 
-      <section className="container-collapse">
-        {collapseData.map((collapse) => (
-          <div className="collapse-about">
-          <Collapse
+      <section className="container-collapse-about">
+        {/* loop through the datacollapse and 
+        create a Collapse component for each element */}
+        {datacollapse.map((collapse) => (
+          <div 
             key={collapse.id}
+            className="collapse-about">
+          <Collapse
             title={collapse.title}
             text={collapse.text}
           />

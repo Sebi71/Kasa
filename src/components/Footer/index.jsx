@@ -1,3 +1,7 @@
+/*******************************/
+/***REUSABLE FOOTER COMPONENT***/
+/*******************************/
+
 import logo from "../../assets/images/logo-footer.svg"
 
 import "./index.scss"
@@ -5,6 +9,7 @@ import "./index.scss"
 export default function Footer() {
   return (
     <footer className="footer">
+        {/* adding the imported logo */}
         <img 
         className="logo-footer" 
         src={logo} 

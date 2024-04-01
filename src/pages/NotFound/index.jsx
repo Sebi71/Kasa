@@ -1,3 +1,12 @@
+/********************/
+/***NOT FOUND PAGE***/
+/********************/
+
+/** 
+ * @param {string} to - URL that links to the home page. 
+ */
+
+/**import of the Link component from the "react-router-dom" package for managing routes in web applications.*/
 import { Link } from "react-router-dom"
 
 import "./index.scss"
