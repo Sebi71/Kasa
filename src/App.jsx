@@ -14,7 +14,7 @@ import AppRoutes from "./routes/AppRoutes";
 export default function App() {
     return (
         <>
-            <BrowserRouter basename="/Kasa/">
+            <BrowserRouter>
                 <NavBar />
                 <AppRoutes />
                 <Footer/>
