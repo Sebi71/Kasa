@@ -17,6 +17,8 @@
 * @param {Array} text - List of different equipment to display, retrieved from housinData. 
 */
 
+/**import useParams to get ID in URL */
+import { useParams } from "react-router-dom";
 /**import the necessary components, housingData, img to display the page */
 import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/Collapse"
@@ -28,10 +30,10 @@ import "./index.scss"
 
 export default function Housing () {
     //retrieving housing ID from current url
-    const id = window.location.pathname.split('/').pop();
+    const {id} = useParams()
     //searches housingData for the ID that matches the one extracted from the URL
     const housing = housingData.find(app => app.id === id);
-  
+
     //if no housing is found, return error page
     if (!housing) {
       return  <NotFound />
