@@ -60,15 +60,15 @@
     }
 
     .slide-number {
-        position: absolute;
-        bottom: 5px;
-        left: 45%;
-        background-color: rgb(51, 51, 51, 0.3);
-        font-size: 14px;
-        color: #fff;
-        padding: 5px;
+        display: none;
         
         @media screen and (min-width: 1024px) {
+            display: block;
+            position: absolute;
+            padding: 5px;
+            bottom: 5px;
+            color: #fff;
+            background-color: rgb(51, 51, 51, 0.3);
             left: 49%;
             font-size: 18px;
             font-weight: 500;
